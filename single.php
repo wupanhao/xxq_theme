@@ -19,11 +19,11 @@ for ($i=0; $i < count($cats); $i++) {
 ?>
 </div>
 
-      <span class="article-title" style="font-family:宋体" ><?php the_title(); ?></span>
+      <span class="article-title"><?php the_title(); ?></span>
       <span class="article-time">发布时间：<?php the_time('Y年n月j日') ?></span>
      <?php if(function_exists('the_views')) { echo '<span class="zhengwendate">浏览次数：'; the_views(); echo '</span>'; } ?>
 
-<div class="article-content" style="font-size:14px;font-family:宋体;">
+<div class="article-content">
 </p>
 
 <?php if (have_posts()) : the_post(); update_post_caches($posts); ?>
