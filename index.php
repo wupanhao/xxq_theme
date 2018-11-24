@@ -54,6 +54,7 @@ foreach ($posts_array as $post) {
 
 $cat_names = ['tzgg','xqjs','lzjy','dqgz
 ','gzzd','tssd'];
+$jwkl = get_category_by_slug('4jwkl');
 $categories = get_categories_by_names($cat_names);
 for ($i=0; $i < count($categories); $i++) {
 ?>  
@@ -65,12 +66,12 @@ for ($i=0; $i < count($categories); $i++) {
       <div class="card-content ">
         <ul class="ul-list">
 <?php
-  $posts_array = get_posts_by_cat_id($categories[$i]->cat_ID,5);
 ?>
 <?php
+/*
+
   if($posts_array){
     $post = $posts_array[0];
-
     if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
       echo '<a href="';
       the_permalink();
@@ -90,7 +91,18 @@ for ($i=0; $i < count($categories); $i++) {
       echo '</div>';
     }
   }
-?>
+    */
+
+  if($categories[$i]->cat_name == '图说师大'){
+  $posts_array = get_posts_by_cat_id($categories[$i]->cat_ID,4);
+
+   ?>
+  <li class="list-item"><a class="normal_link short_link" href="<?php echo get_category_link($jwkl->cat_ID); ?>" target="_blank" title="<?php echo $jwkl->cat_name ;?>"><?php echo $jwkl->cat_name ;?></a></li>
+    <?php 
+  } 
+  else
+    $posts_array = get_posts_by_cat_id($categories[$i]->cat_ID,5);
+   ?>
 
 <?php
   foreach ($posts_array as $post) {

@@ -1,6 +1,4 @@
-
 <?php
-
 
 get_header();
 
@@ -112,21 +110,28 @@ $page_links = par_pagenavi($num);
 // var_dump($the_query);
 
 ?>
-
-<ul class="ul-list" >
-
-<?php
-foreach ($posts_array as $post) {
-// echo $p->ID;
- // var_dump($p);
- ?>
-
-<li class="list-item"><a class="normal_link long_link" href="<?php the_permalink(); ?>" target="_blank" title="<?php the_title();?>"><?php the_title();?></a><span class="newtime"><?php the_time('Y年m月d日') ?>&nbsp;</span></li>
-
- <?php } ?>
-   </ul>
-
 <style type="text/css">
+
+.campus-list{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.campus-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.campus-img img{
+  width: 300px;
+  height: 200px;
+}
+
 .page_links a{
   font-size: 16px;
   padding: 4px;
@@ -160,6 +165,32 @@ foreach ($posts_array as $post) {
 
 
 </style>
+<ul class="campus-list" >
+
+<?php
+foreach ($posts_array as $post) {
+// echo $p->ID;
+ // var_dump($p);
+
+
+  if ( has_post_thumbnail() ) {
+ ?>
+
+<li class="campus-item">
+  <a href="<?php the_permalink(); ?>">
+    <span class="campus-img"><?php the_post_thumbnail(array(300,200));?></span>
+  </a>
+  <span class="campus-title"><?php the_title();?></span>
+  </li>
+
+ <?php
+    } //end if
+
+  }  // end foreach
+  ?>
+   </ul>
+
+
 
   <div class="posts-nav">
 
