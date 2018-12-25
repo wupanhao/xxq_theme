@@ -18,6 +18,7 @@ $jjc = get_page_by_title('基建处工作职责');
 $xxq = get_page_by_title('新校区建设指挥部工作职责');
 $jgsz = get_page_by_title('机构设置');
 $contact = get_page_by_title('联系我们');
+$bmjs = get_page_by_title('部门介绍');
 ?>
 
 <body>
@@ -25,12 +26,12 @@ $contact = get_page_by_title('联系我们');
   <img class="top-img" src="<?php bloginfo('template_url');?>/assets/images/topbg.png">
   <div id="nav">
     <span class="nav-item"><a href="<?php echo home_url();?>" class="top_link"><span>&nbsp;&nbsp;&nbsp;&nbsp;首页</span></a></span>
-    <span class="dropdown nav-item ">
-      <a href="#" class="top_link ">部门介绍</a>
-      <ul class="dropdown-content">
+    <span class="nav-item ">
+      <a class="top_link " href="<?php echo $bmjs->guid; ?>">部门介绍</a>
+<!--       <ul class="dropdown-content">
        <li><a href="<?php echo $jjc->guid; ?>">基建处</a></li>
        <li><a href="<?php echo $xxq->guid; ?>">新校区建设指挥部</a></li>
-      </ul>
+      </ul> -->
     </span>
     <span class="nav-item"><a href="<?php echo $jgsz->guid; ?>" class="top_link">机构设置</a></span>
 <?php

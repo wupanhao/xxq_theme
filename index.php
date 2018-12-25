@@ -54,6 +54,9 @@ foreach ($posts_array as $post) {
 
 $cat_names = ['tzgg','xqjs','lzjy','dqgz
 ','gzzd','tssd'];
+$lgly = get_category_by_slug('1lgly');
+$fhnc = get_category_by_slug('2fhnc');
+$zrsy = get_category_by_slug('3zrsy');
 $jwkl = get_category_by_slug('4jwkl');
 $categories = get_categories_by_names($cat_names);
 for ($i=0; $i < count($categories); $i++) {
@@ -94,9 +97,12 @@ for ($i=0; $i < count($categories); $i++) {
     */
 
   if($categories[$i]->cat_name == '图说师大'){
-  $posts_array = get_posts_by_cat_id($categories[$i]->cat_ID,4);
+  $posts_array = get_posts_by_cat_id($categories[$i]->cat_ID,1);
 
    ?>
+  <li class="list-item"><a class="normal_link short_link" href="<?php echo get_category_link($lgly->cat_ID); ?>" target="_blank" title="<?php echo $lgly->cat_name ;?>"><?php echo $lgly->cat_name ;?></a></li>
+  <li class="list-item"><a class="normal_link short_link" href="<?php echo get_category_link($fhnc->cat_ID); ?>" target="_blank" title="<?php echo $fhnc->cat_name ;?>"><?php echo $fhnc->cat_name ;?></a></li>
+  <li class="list-item"><a class="normal_link short_link" href="<?php echo get_category_link($zrsy->cat_ID); ?>" target="_blank" title="<?php echo $zrsy->cat_name ;?>"><?php echo $zrsy->cat_name ;?></a></li>
   <li class="list-item"><a class="normal_link short_link" href="<?php echo get_category_link($jwkl->cat_ID); ?>" target="_blank" title="<?php echo $jwkl->cat_name ;?>"><?php echo $jwkl->cat_name ;?></a></li>
     <?php 
   } 

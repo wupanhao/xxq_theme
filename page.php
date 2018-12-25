@@ -1,7 +1,7 @@
 <?php
 get_header();
 $pages = array('联系我们','机构设置');
-$pages2 = array('基建处工作职责','新校区建设指挥部工作职责');
+$pages2 = array('基建处工作职责','新校区建设指挥部工作职责','部门介绍');
 ?>
 <?php
 // the_time('Y年n月j日');
