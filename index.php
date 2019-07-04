@@ -11,7 +11,9 @@ $posts_array = get_posts_by_cat_name( 'slider' , 15); ?>
 <?php
 foreach ($posts_array as $post) {
   if ( has_post_thumbnail() ) {
-      echo '<div> <a href="';
+      echo '<div> <a title="';
+      the_title();
+      echo '" href="';
       the_permalink();
       echo '"> ';
     // echo '<img src="';
@@ -136,7 +138,9 @@ $posts_array =get_posts_by_cat_name('album',55); ?>
 <?php
 foreach ($posts_array as $post) {
   if ( has_post_thumbnail() ) {
-      echo '<div> <a href="';
+      echo '<div> <a title="';
+      the_title();
+      echo '" href="';
       the_permalink();
       echo '"> ';
     // echo '<img src="';
@@ -157,9 +161,10 @@ foreach ($posts_array as $post) {
     $('#bxslider-top').bxSlider({
       auto: true,
       // autoControls: true,
-      // stopAutoOnClick: true,
+      stopAutoOnClick: true,
       minSlides:1,
       pager: true,
+      touchEnabled: false,
       captions: true,
       slideWidth: 400
     });
@@ -170,6 +175,8 @@ foreach ($posts_array as $post) {
         moveSlides: 1,
         startSlide: 1,
         controls:true,
+        stopAutoOnClick: true,
+        touchEnabled: false,
         // captions: true,
         slideMargin: 10,
         pager:false,
