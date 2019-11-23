@@ -131,7 +131,7 @@ body{
 	border-width: 1px;
 	border-style: solid;
 	border-color: #CCC;
-	margin: 5px 0px;
+	margin: 5px 0px 0px 0px;
 	min-width: 300px;
 	/*max-width: 350px;*/
 }
@@ -154,6 +154,10 @@ body{
 	text-decoration: none;
 }
 
+.navi-cat {
+	color: rgb(0,153,255);
+	text-decoration: none;	
+}
 
 .card-title{
 	display: flex;
@@ -211,6 +215,7 @@ body{
 	justify-content: center;
 	flex-wrap: wrap; 
 	/*color: #09F;*/
+	border-top: solid 1px #CCC;
 	font-size: 12px;
 	padding: 3px 10px;
 	/*background-color: gray; */
@@ -274,8 +279,6 @@ body{
 	align-items: center;
 	margin: auto;
 	padding: 10px;
-	border-width: 1px;
-	/*border-style: solid;*/
 	border-color: #CCC;
 	/*align-self: center;*/
 }
@@ -294,7 +297,6 @@ body{
 	width: 100%;
 	text-align: center;
 	color: rgb(0,160,233);
-	border-bottom: solid 1px #CCC;
 	padding: 10px;
 }
 

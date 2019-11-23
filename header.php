@@ -2,12 +2,21 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title><?php bloginfo( 'name' ); ?></title>
+  <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/flexslider.css" type="text/css" />  
+  <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/subCon.css" type="text/css" />  
   <link href="<?php bloginfo('template_url');?>/style.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="<?php bloginfo('template_url');?>/assets/css/jquery.bxslider.min.css" type="text/css" />
   <script src="<?php bloginfo('template_url');?>/assets/js/jquery-1.12.4.min.js" type="text/javascript"></script>
   <script src="<?php bloginfo('template_url');?>/assets/js/jquery.bxslider.min.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script src="<?php bloginfo('template_url');?>/assets/js/html5.js"  type="text/javascript"></script>
+<![endif]-->  
 </head>
 <?php
 //wp_list_categories('orderby=id&show_count=1&use_desc_for_title=0&child_of=5');
